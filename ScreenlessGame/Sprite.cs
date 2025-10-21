@@ -1,18 +1,13 @@
 namespace ScreenlessGame;
 
-public class Sprite
+public class Sprite(int x, int y, int width, int height)
 {
-    public int X { get; set; }
-    public int Y { get; set; }
-    public int Width { get; set; }
-    public int Height { get; set; }
-    public Sprite(int x, int y, int width,int height){
-        X = x;
-        Y = y;
-        Width = width;
-        Height = height;
-    }
-    public bool collides(Sprite otherSprite){
+    public int X { get; set; } = x;
+    public int Y { get; set; } = y;
+    public int Width { get; set; } = width;
+    public int Height { get; set; } = height;
+
+    public bool Collides(Sprite otherSprite){
         if (this.X > otherSprite.X + otherSprite.Width){
             return false;
         }

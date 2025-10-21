@@ -1,11 +1,7 @@
 namespace ScreenlessGame;
 
-public class Screen
+public class Screen(int width, int height)
 {
-    public int Width { get; set; }
-    public int Height { get; set; }
-    public Screen(int width, int height){
-        Width = width;
-        Height = height;
-    }
+    public int Width { get; set; } = width;
+    public int Height { get; set; } = height;
 }
